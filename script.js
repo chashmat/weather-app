@@ -14,7 +14,6 @@ searchbox.addEventListener(`keypress`, setQuery);
 function setQuery(evt) {
     if (evt.keyCode == 13) {
         getResults(searchbox.value);
-        console.log(searchbox.value);
     }
 }
 
@@ -26,7 +25,6 @@ function getResults(query) {
 }
 
 function displayResults(weather) {
-    console.log(weather);
     displayCity.innerHTML = `${weather.name}, ${weather.sys.country}`;
     let date = new Date();
     displayDate.innerHTML = dateBuilder(date);
